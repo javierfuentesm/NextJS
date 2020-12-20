@@ -3,6 +3,9 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/product/[id]": "pages/product/[id].js",
+  "/api/getShirt": "pages/api/getShirt.js",
   "/": "pages/index.js",
-  "/about": "pages/about.js"
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
+  "/products": "pages/products.js",
+  "/api/getShirts": "pages/api/getShirts.js"
 }
