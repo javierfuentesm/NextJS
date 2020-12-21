@@ -20,7 +20,7 @@ const ProductItem = () => {
         <>
           <p>Nombre : {shirt.nombre}</p>
           <p>Precio : {shirt.precio}</p>
-          <p>Caracteristica : {shirt.caracteristica}</p>
+          <p>Caracteristica : {shirt.caracteristicas}</p>
         </>
       )}
       Esta es la pagina del producto : {id}
