@@ -8,11 +8,11 @@ const Layout: React.FC = ({ children }) => {
       <NavBar />
       {children}
 
-      <style jsx>{`
-        div {
-          background: salmon;
-        }
-      `}</style>
+      {/*<style jsx>{`*/}
+      {/*  div {*/}
+      {/*    background: salmon;*/}
+      {/*  }*/}
+      {/*`}</style>*/}
     </div>
   );
 };

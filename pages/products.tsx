@@ -1,5 +1,8 @@
 import React from "react";
+import { Grid, Container } from "semantic-ui-react";
 import { useShirts } from "../lib/swrHooks";
+import { ShirtCard } from "@/components/Card/ShirtCard";
+import Link from "next/link";
 
 const Products = () => {
   const { shirts, isLoading, isError } = useShirts();
@@ -9,17 +12,26 @@ const Products = () => {
       {isLoading && <>Loading</>}
       {isError && <>Hubo un error</>}
       {shirts && (
-        <>
-          {shirts.map((shirt) => {
-            return (
-              <React.Fragment key={shirt.id}>
-                <p>Nombre : {shirt.nombre}</p>
-                <p>Precio : {shirt.precio}</p>
-                <p>Caracteristicas : {shirt.caracteristicas}</p>
-              </React.Fragment>
-            );
-          })}
-        </>
+        <Container>
+          <Grid stackable columns={3}>
+            {shirts.map(({ id, nombre, precio, caracteristicas, imagen }) => {
+              return (
+                <Grid.Column key={id}>
+                  <Link href={`/product/${id}`}>
+                    <a>
+                      <ShirtCard
+                        name={nombre}
+                        price={precio}
+                        description={caracteristicas}
+                        image={imagen}
+                      />
+                    </a>
+                  </Link>
+                </Grid.Column>
+              );
+            })}
+          </Grid>
+        </Container>
       )}
     </>
   );

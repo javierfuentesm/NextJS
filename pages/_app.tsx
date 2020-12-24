@@ -1,6 +1,7 @@
 import { AppProps } from "next/app";
 import Layout from "../components/Layout/Layout";
 // import "../styles.css";
+import "semantic-ui-css/semantic.min.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
