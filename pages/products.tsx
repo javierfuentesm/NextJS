@@ -12,7 +12,7 @@ const Products = () => {
       {isLoading && <>Loading</>}
       {isError && <>Hubo un error</>}
       {shirts && (
-        <Container>
+        <Container text>
           <Grid stackable columns={3}>
             {shirts.map(({ id, nombre, precio, caracteristicas, imagen }) => {
               return (

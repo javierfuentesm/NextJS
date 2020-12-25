@@ -1,6 +1,5 @@
-import React, { useState, Component } from "react";
-import { Menu, Segment } from "semantic-ui-react";
-import Link from "next/link";
+import React, { useState } from "react";
+import { Menu } from "semantic-ui-react";
 import { useRouter } from "next/router";
 
 const NavBar = () => {
