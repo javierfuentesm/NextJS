@@ -9,7 +9,6 @@ export const getServerSideProps = async () => {
   const results = await query(`
       SELECT * FROM playeras
       ORDER BY id DESC
-     
   `);
 
   return {
