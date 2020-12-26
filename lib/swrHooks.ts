@@ -4,7 +4,7 @@ function fetcher(url: string) {
   return window.fetch(url).then((res) => res.json());
 }
 
-export function useShirts() {
+export function useShirts(initialData = {}) {
   const { data, error } = useSWR(`/api/getShirts`, fetcher);
 
   return {
